@@ -1,0 +1,89 @@
+{
+  "notice": "Fictional demo fixtures, not live API responses. Simplified examples, not complete vendor schemas. No accounts or health records are accessed.",
+  "profiles": {
+    "A": {
+      "name": "Maya",
+      "whoop": {
+        "simulated": true,
+        "provider": "WHOOP",
+        "recovery": {
+          "score": {
+            "recovery_score": 82,
+            "hrv_rmssd_milli": 58
+          }
+        },
+        "sleep": {
+          "sleep_minutes": 485
+        },
+        "cycle": {
+          "score": {
+            "strain": 9
+          }
+        }
+      },
+      "apple-health": {
+        "simulated": true,
+        "provider": "Apple Health",
+        "sleep_minutes": 475,
+        "step_count": 8200,
+        "heart_rate_variability_sdnn_ms": 65
+      }
+    },
+    "B": {
+      "name": "Alex",
+      "whoop": {
+        "simulated": true,
+        "provider": "WHOOP",
+        "recovery": {
+          "score": {
+            "recovery_score": 64,
+            "hrv_rmssd_milli": 42
+          }
+        },
+        "sleep": {
+          "sleep_minutes": 405
+        },
+        "cycle": {
+          "score": {
+            "strain": 7
+          }
+        }
+      },
+      "apple-health": {
+        "simulated": true,
+        "provider": "Apple Health",
+        "sleep_minutes": 395,
+        "step_count": 4600,
+        "heart_rate_variability_sdnn_ms": 49
+      }
+    },
+    "C": {
+      "name": "Jordan",
+      "whoop": {
+        "simulated": true,
+        "provider": "WHOOP",
+        "recovery": {
+          "score": {
+            "recovery_score": 38,
+            "hrv_rmssd_milli": 32
+          }
+        },
+        "sleep": {
+          "sleep_minutes": 340
+        },
+        "cycle": {
+          "score": {
+            "strain": 15
+          }
+        }
+      },
+      "apple-health": {
+        "simulated": true,
+        "provider": "Apple Health",
+        "sleep_minutes": 330,
+        "step_count": 3100,
+        "heart_rate_variability_sdnn_ms": 39
+      }
+    }
+  }
+}
