@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "lifeadapt-health-mocks": {
+      "command": "node",
+      "args": [
+        "mcp/health-mock-server.cjs"
+      ],
+      "disabled": true,
+      "autoApprove": []
+    }
+  }
+}
