@@ -1,0 +1,6 @@
+const fs=require('fs'),vm=require('vm');const script=fs.readFileSync('dist/index.html','utf8').match(/<script>([\s\S]*?)<\/script>/)[1].replace('subscribe(render);','').replace('render(); // Initial render','');const ctx={console,Intl,Date,localStorage:{getItem:()=>null,setItem:()=>{},removeItem:()=>{}}};vm.createContext(ctx);vm.runInContext(script,ctx);vm.runInContext(`
+function check(v,m){if(!v)throw Error(m)}
+for(const id of ['A','B','C']){setScenario(id);for(const [r,h,low] of [[39,8,true],[40,8,true],[66,8,true],[67,8,false],[82,5.75,true],[82,6,true],[82,7,false]]){const before=JSON.stringify(_state);const result=previewWhatIf(_state,r,h);check(result.lighter===low,'threshold');check(JSON.stringify(_state)===before,'preview changes no live state');check(result.plan.proposedEvents.every(validEventTime),'valid preview');}}
+setScenario('C');const low=previewWhatIf(_state,38,340/60),normal=previewWhatIf(_state,82,8);check(low.plan.changes.some(c=>c.changeType==='shortened'),'Jordan preview can shorten emails');check(normal.plan.changes.some(c=>c.changeType==='moved'),'normal preview keeps full email duration');
+console.log('PASS: what-if thresholds for all people, no side effects, actual schedule previews and Jordan tradeoff.');
+`,ctx);

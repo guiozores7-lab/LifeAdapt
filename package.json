@@ -1,0 +1,15 @@
+{
+  "name": "lifeadapt-whoop",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test:whoop": "node check-whoop.cjs",
+    "dev": "node preview-whoop.cjs",
+    "mcp:configure": "node mcp/configure-kiro.cjs",
+    "mcp:serve": "node mcp/health-mock-server.cjs",
+    "test:health-mocks": "node check-health-mocks.cjs"
+  }
+}
